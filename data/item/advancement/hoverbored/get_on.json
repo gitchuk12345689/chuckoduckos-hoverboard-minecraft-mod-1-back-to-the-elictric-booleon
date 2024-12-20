@@ -5,7 +5,7 @@
         "conditions": {
           "item": {
             "items": "minecraft:amethyst_shard",
-            "components": {
+            "predicates": {
               "minecraft:custom_data": {"is_hoverboard":true}
             }
           }
