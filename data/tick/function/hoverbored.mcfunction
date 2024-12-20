@@ -60,4 +60,4 @@ execute unless entity @s[gamemode=creative] at @s rotated ~ 0 run function playe
 execute if predicate tick:sneak run function tick:hoverbords/getoff
 
 scoreboard players operation #test hoverboard.id = @s hoverboard.id
-execute as @e[type=item_display,tag=hoverbored] if score @s hoverboard.id = #test hoverboard.id run tp @s @p
+execute as @e[type=item_display,tag=hoverboard] if score @s hoverboard.id = #test hoverboard.id rotated 0 ~ run tp @s @p
