@@ -8,7 +8,8 @@ attribute @s fall_damage_multiplier base set 0.0
 scoreboard players set @s speed 1
 
 ## create a hoverboard in the oevrworld
-summon item_display ~ ~ ~ {Tags:["new.hoverboard", "hoverboard"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.8f,0f],scale:[1.5f,1.5f,1.5f]},item:{id:"minecraft:amethyst_shard",count:1,components:{"item_model":"hoverbored"}}}
+execute if score @s hoverboard.style matches 1 run summon item_display ~ ~ ~ {Tags:["new.hoverboard", "hoverboard"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.8f,0f],scale:[1.5f,1.5f,1.5f]},item:{id:"minecraft:amethyst_shard",count:1,components:{"item_model":"hoverbored"}}}
+execute if score @s hoverboard.style matches 2 run summon item_display ~ ~ ~ {Tags:["new.hoverboard", "hoverboard"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.8f,0f],scale:[1.5f,1.5f,1.5f]},item:{id:"minecraft:amethyst_shard",count:1,components:{"item_model":"batboard"}}}
 
 scoreboard players add $global.id hoverboard.id 1
 scoreboard players operation @s hoverboard.id = $global.id hoverboard.id
