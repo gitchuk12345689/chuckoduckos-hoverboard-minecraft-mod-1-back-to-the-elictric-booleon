@@ -1,6 +1,7 @@
 {
     "type": "minecraft:crafting_shaped",
     "category": "equipment",
+
     "group": "hoverboard",
     "pattern": [
       "###",
@@ -17,8 +18,8 @@
       "id": "minecraft:amethyst_shard",
       "count": 1,
       "components": {
-        "minecraft:item_model": "hoverbored",
-        "minecraft:custom_name": "{\"color\":\"#ff55e3\",\"text\":\"Hoverboard\",\"italic\":false}",
+        "minecraft:item_model": "batboard",
+        "minecraft:custom_name": "{\"color\":\"#333233\",\"text\":\"Batboard\",\"italic\":false}",
         "minecraft:rarity": "epic",
         "minecraft:consumable": {
           "animation": "block",
