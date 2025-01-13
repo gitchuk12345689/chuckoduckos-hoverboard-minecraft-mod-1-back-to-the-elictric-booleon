@@ -45,8 +45,8 @@ execute if score #air_blocks var matches ..2 run attribute @s minecraft:gravity 
 # execute if predicate tick:forward run say for
 # execute if predicate tick:backward run say against
 
-execute if predicate tick:forward if score @s speed matches ..499 run scoreboard players add @s speed 10
-execute if predicate tick:backward if score @s speed matches -99.. run scoreboard players remove @s speed 10
+execute if predicate tick:forward if score @s speed > @s hoverboard.max_speed run scoreboard players operation @s speed += @s hoverboard.acceleration
+execute if predicate tick:backward if score @s speed < @s hoverboard.min_speed run scoreboard players operation @s speed -= @s hoverboard.deceleration
 
 scoreboard players operation $strength player_motion.api.launch = @s speed
 
