@@ -16,7 +16,7 @@ scoreboard players set @s hoverboard.height 5
 
 ## create a hoverboard in the oevrworld
 execute if score @s hoverboard.style matches 1 run summon item_display ~ ~ ~ {Tags:["new.hoverboard", "hoverboard"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.8f,0f],scale:[1.5f,1.5f,1.5f]},item:{id:"minecraft:amethyst_shard",count:1,components:{"item_model":"hoverbored"}}}
-execute if score @s hoverboard.style matches 2 run summon item_display ~ ~ ~ {Tags:["new.hoverboard", "hoverboard"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.8f,0f],scale:[1.5f,1.5f,1.5f]},item:{id:"minecraft:amethyst_shard",count:1,components:{"item_model":"batboard"}}}
+execute if score @s hoverboard.style matches 2 run summon item_display ~ ~ ~ {Tags:["new.hoverboard", "batboard"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.8f,0f],scale:[1.5f,1.5f,1.5f]},item:{id:"minecraft:amethyst_shard",count:1,components:{"item_model":"batboard"}}}
 execute if score @s hoverboard.style matches 2 run scoreboard players set @s hoverboard.max_speed 549
 execute if score @s hoverboard.style matches 2 run scoreboard players set @s hoverboard.acceleration 11
 execute if score @s hoverboard.style matches 2 run scoreboard players set @s hoverboard.deceleration 12
