@@ -13,6 +13,7 @@ scoreboard players set @s hoverboard.acceleration 10
 scoreboard players set @s hoverboard.min_speed -99
 scoreboard players set @s hoverboard.deceleration 10
 scoreboard players set @s hoverboard.height 5
+scoreboard players set @s hoverboard.on_water 0
 
 ## create a hoverboard in the oevrworld
 execute if score @s hoverboard.style matches 1 run summon item_display ~ ~ ~ {Tags:["new.hoverboard", "hoverboard"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.8f,0f],scale:[1.5f,1.5f,1.5f]},item:{id:"minecraft:amethyst_shard",count:1,components:{"item_model":"hoverbored"}}}
@@ -22,12 +23,19 @@ execute if score @s hoverboard.style matches 2 run scoreboard players set @s hov
 execute if score @s hoverboard.style matches 2 run scoreboard players set @s hoverboard.acceleration 11
 execute if score @s hoverboard.style matches 2 run scoreboard players set @s hoverboard.deceleration 12
 execute if score @s hoverboard.style matches 2 run scoreboard players set @s hoverboard.height 17
-execute if score @s hoverboard.style matches 3 run summon item_display ~ ~ ~ {Tags:["new.hoverboard", "hoverboard"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.8f,0f],scale:[1.5f,1.5f,1.5f]},item:{id:"minecraft:amethyst_shard",count:1,components:{"item_model":"batboard"}}}
+execute if score @s hoverboard.style matches 3 run summon item_display ~ ~ ~ {Tags:["new.hoverboard", "hoverboard"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.2f,0f],scale:[1f,1f,1f]},item:{id:"minecraft:amethyst_shard",count:1,components:{"item_model":"sonicsbored"}}}
 execute if score @s hoverboard.style matches 3 run scoreboard players set @s hoverboard.max_speed 2000000000
 execute if score @s hoverboard.style matches 3 run scoreboard players set @s hoverboard.min_speed 0
 execute if score @s hoverboard.style matches 3 run scoreboard players set @s hoverboard.acceleration 1
-execute if score @s hoverboard.style matches 3 run scoreboard players set @s hoverboard.deceleration 20
+execute if score @s hoverboard.style matches 3 run scoreboard players set @s hoverboard.deceleration 500
 execute if score @s hoverboard.style matches 3 run scoreboard players set @s hoverboard.height 5
+execute if score @s hoverboard.style matches 4 run summon item_display ~ ~ ~ {Tags:["new.hoverboard", "hoverboard"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.2f,0f],scale:[1.5f,1.5f,1.5f]},item:{id:"minecraft:amethyst_shard",count:1,components:{"item_model":"oak_boat"}}}
+execute if score @s hoverboard.style matches 4 run scoreboard players set @s hoverboard.max_speed 400
+execute if score @s hoverboard.style matches 4 run scoreboard players set @s hoverboard.min_speed -200
+execute if score @s hoverboard.style matches 4 run scoreboard players set @s hoverboard.acceleration 5
+execute if score @s hoverboard.style matches 4 run scoreboard players set @s hoverboard.deceleration 20
+execute if score @s hoverboard.style matches 4 run scoreboard players set @s hoverboard.height 5
+execute if score @s hoverboard.style matches 4 run scoreboard players set @s hoverboard.on_water 1
 
 
 
