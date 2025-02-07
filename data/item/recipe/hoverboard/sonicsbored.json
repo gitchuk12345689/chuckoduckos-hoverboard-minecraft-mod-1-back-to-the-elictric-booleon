@@ -10,16 +10,16 @@
     ],
     "key": {
       "1": "minecraft:redstone_torch",
-      "2": "minecraft:diamond_block",
-      "#": "minecraft:gray_wool",
-      "A": "minecraft:diamond"
+      "2": "minecraft:redstone_block",
+      "#": "minecraft:phantom_membrane",
+      "A": "minecraft:iron_ingot"
     },
     "result": {
       "id": "minecraft:amethyst_shard",
       "count": 1,
       "components": {
-        "minecraft:item_model": "batboard",
-        "minecraft:custom_name": "{\"color\":\"#333233\",\"text\":\"Batboard\",\"italic\":false}",
+        "minecraft:item_model": "sonicsbored",
+        "minecraft:custom_name": "{\"color\":\"#3a8bf9\",\"text\":\"sonicbored\",\"italic\":false}",
         "minecraft:rarity": "epic",
         "minecraft:consumable": {
           "animation": "block",
@@ -27,7 +27,7 @@
         },
         "minecraft:custom_data": {
           "is_hoverboard": true,
-          "hoverboard_style": 2
+          "hoverboard_style": 3
         },
         "minecraft:max_stack_size": 4
       }
