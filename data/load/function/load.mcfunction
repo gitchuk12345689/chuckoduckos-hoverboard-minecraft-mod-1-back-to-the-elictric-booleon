@@ -14,3 +14,4 @@ scoreboard objectives add hoverboard.deceleration dummy
 scoreboard objectives add hoverboard.min_speed dummy
 scoreboard objectives add hoverboard.height dummy
 scoreboard objectives add hoverboard.on_water dummy
+scoreboard objectives add hoverboard.stepheight dummy

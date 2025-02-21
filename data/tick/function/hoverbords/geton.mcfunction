@@ -12,8 +12,9 @@ scoreboard players set @s hoverboard.max_speed 499
 scoreboard players set @s hoverboard.acceleration 10
 scoreboard players set @s hoverboard.min_speed -99
 scoreboard players set @s hoverboard.deceleration 10
-scoreboard players set @s hoverboard.height 5
+scoreboard players set @s hoverboard.height 10
 scoreboard players set @s hoverboard.on_water 0
+scoreboard players set @s hoverboard.stepheight 5
 
 ## create a hoverboard in the oevrworld
 execute if score @s hoverboard.style matches 1 run summon item_display ~ ~ ~ {Tags:["new.hoverboard", "hoverboard"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.8f,0f],scale:[1.5f,1.5f,1.5f]},item:{id:"minecraft:amethyst_shard",count:1,components:{"item_model":"hoverbored"}}}
