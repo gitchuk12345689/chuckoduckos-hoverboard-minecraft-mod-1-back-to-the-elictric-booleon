@@ -4,22 +4,26 @@
 
     "group": "hoverboard",
     "pattern": [
-      "###",
-      "121",
-      "A A"
+      "0##",
+      "12e",
+      "Abc"
     ],
     "key": {
-      "1": "minecraft:redstone_torch",
-      "2": "minecraft:redstone_block",
-      "#": "minecraft:phantom_membrane",
-      "A": "minecraft:iron_ingot"
+      "1": "minecraft:cherry_planks",
+      "2": "minecraft:ice",
+      "#": "minecraft:blue_wool",
+      "A": "minecraft:tnt",
+      "b": "wind_charge",
+      "c": "glow_item_frame",
+      "0": "ender_pearl",
+      "e": "white_bundle"
     },
     "result": {
       "id": "minecraft:amethyst_shard",
       "count": 1,
       "components": {
         "minecraft:item_model": "sonicsbored",
-        "minecraft:custom_name": "{\"color\":\"#3a8bf9\",\"text\":\"sonicbored\",\"italic\":false}",
+        "minecraft:custom_name": "{\"color\":\"#3a8bf9\",\"text\":\"sonicbored\",\"italic\":true}",
         "minecraft:rarity": "epic",
         "minecraft:consumable": {
           "animation": "block",

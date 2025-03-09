@@ -30,7 +30,7 @@ execute if score @s hoverboard.style matches 3 run summon item_display ~ ~ ~ {Ta
 execute if score @s hoverboard.style matches 3 run scoreboard players set @s hoverboard.max_speed 2000000000
 execute if score @s hoverboard.style matches 3 run scoreboard players set @s hoverboard.min_speed 0
 execute if score @s hoverboard.style matches 3 run scoreboard players set @s hoverboard.acceleration 1
-execute if score @s hoverboard.style matches 3 run scoreboard players set @s hoverboard.deceleration 500
+execute if score @s hoverboard.style matches 3 run scoreboard players set @s hoverboard.deceleration 10
 execute if score @s hoverboard.style matches 3 run scoreboard players set @s hoverboard.height 6
 execute if score @s hoverboard.style matches 3 run scoreboard players set @s hoverboard.stepheight -3
 #boaty the boatboat
