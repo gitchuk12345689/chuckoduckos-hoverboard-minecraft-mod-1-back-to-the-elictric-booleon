@@ -13,7 +13,7 @@ scoreboard players set @s hoverboard.acceleration 10
 scoreboard players set @s hoverboard.min_speed -99
 scoreboard players set @s hoverboard.deceleration 10
 scoreboard players set @s hoverboard.height 10
-scoreboard players set @s hoverboard.on_water 0
+scoreboard players set @s hoverboard.on_water 80
 scoreboard players set @s hoverboard.stepheight 5
 
 ## create a hoverboard in the oevrworld
@@ -40,7 +40,7 @@ execute if score @s hoverboard.style matches 4 run scoreboard players set @s hov
 execute if score @s hoverboard.style matches 4 run scoreboard players set @s hoverboard.acceleration 5
 execute if score @s hoverboard.style matches 4 run scoreboard players set @s hoverboard.deceleration 20
 execute if score @s hoverboard.style matches 4 run scoreboard players set @s hoverboard.height 5
-execute if score @s hoverboard.style matches 4 run scoreboard players set @s hoverboard.on_water 1
+execute if score @s hoverboard.style matches 4 run scoreboard players set @s hoverboard.on_water 100
 
 
 

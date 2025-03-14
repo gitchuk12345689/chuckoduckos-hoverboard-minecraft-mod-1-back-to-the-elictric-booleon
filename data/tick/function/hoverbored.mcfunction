@@ -60,7 +60,7 @@ execute if predicate tick:forward if score @s speed matches ..499 run scoreboard
 execute if predicate tick:backward if score @s speed matches ..299 run scoreboard players add $strength player_motion.api.launch 120
 
 #you are located above the liquid commonly known as water
-execute if score #on hoverboard.on_water matches 1 run scoreboard players operation @s speed -= @s hoverboard.acceleration
+execute if score #on hoverboard.on_water matches 1 run function tick:hoverbords/on_water
 
 # scoreboard players operation $strength player_motion.api.launch = @s move
 execute unless entity @s[gamemode=creative] at @s rotated ~ 0 run function player_motion:api/launch_looking
