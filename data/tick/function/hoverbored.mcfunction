@@ -70,3 +70,4 @@ execute if predicate tick:sneak run function tick:hoverbords/getoff
 
 scoreboard players operation #test hoverboard.id = @s hoverboard.id
 execute as @e[type=item_display,tag=hoverboard] if score @s hoverboard.id = #test hoverboard.id run tp @s ~ ~ ~ ~ 0
+playsound minecraft:block.fire.extinguish master @a ~ ~ ~ 0.1 2
