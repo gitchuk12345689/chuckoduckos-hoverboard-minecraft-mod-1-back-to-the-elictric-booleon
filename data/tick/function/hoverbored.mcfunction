@@ -13,7 +13,7 @@ execute positioned ~ ~-0.1 ~ run function tick:hoverbords/aircheck
 scoreboard players operation AirBlocks y_motion = #air_blocks var
 
 ## its stepping time
-execute rotated ~ 0 positioned ^ ^ ^1 unless block ~ ~ ~ #air run particle flame
+#execute rotated ~ 0 positioned ^ ^ ^1 unless block ~ ~ ~ #air run particle flame
 execute rotated ~ 0 positioned ^ ^ ^1 unless block ~ ~ ~ #air run scoreboard players operation #air_blocks var -= @s hoverboard.stepheight
 
 ## goal
