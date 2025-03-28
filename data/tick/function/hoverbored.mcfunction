@@ -75,5 +75,5 @@ execute as @e[type=item_display,tag=hoverboard] if score @s hoverboard.id = #tes
 execute if score @s hoverboard.style matches 1 run particle flame ~ ~ ~ 0.1 0.1 0.1 0 3
 execute if score @s hoverboard.style matches 2 run particle item{item:"bat_spawn_egg"} ~ ~ ~ 0.1 0.1 0.1 0 3
 execute if score @s hoverboard.style matches 3 run particle minecraft:trial_spawner_detection_ominous ~ ~-1 ~ 0.1 0.1 0.1 0 3
-execute if score @s hoverboard.style matches 3 if score @s speed matches 1000.. run particle sonic_boom ~ ~-1 ~ 0.1 0.1 0.1 0 1
+execute if score @s hoverboard.style matches 3 if score @s speed matches 1000.. run particle explosion ~ ~-1 ~ 0.1 0.1 0.1 0 1
 execute if score @s hoverboard.style matches 4 run particle fishing ~ ~ ~ 0.25 0.1 0.25 0 5
