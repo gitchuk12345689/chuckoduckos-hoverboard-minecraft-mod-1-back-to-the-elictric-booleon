@@ -23,7 +23,7 @@
       "count": 1,
       "components": {
         "minecraft:item_model": "sonicsbored",
-        "minecraft:custom_name": "{\"color\":\"#3a8bf9\",\"text\":\"sonicbored\",\"italic\":true}",
+        "minecraft:custom_name": {color:"#3a8bf9",text:"sonicbored",italic:true},
         "minecraft:rarity": "epic",
         "minecraft:consumable": {
           "animation": "block",
