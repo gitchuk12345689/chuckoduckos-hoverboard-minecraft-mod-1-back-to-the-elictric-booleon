@@ -56,8 +56,8 @@ execute if predicate tick:backward if score @s speed > @s hoverboard.min_speed r
 
 scoreboard players operation $strength player_motion.api.launch = @s speed
 
-execute if predicate tick:forward if score @s speed matches ..499 run scoreboard players remove $strength player_motion.api.launch 120
-execute if predicate tick:backward if score @s speed matches ..299 run scoreboard players add $strength player_motion.api.launch 120
+execute if predicate tick:forward run scoreboard players remove $strength player_motion.api.launch 200
+execute if predicate tick:backward run scoreboard players add $strength player_motion.api.launch 200
 
 #you are located above the liquid commonly known as water
 execute if score @s hoverboard.style matches 3 if score @s speed matches 1000.. if score #on hoverboard.on_water matches 1 run scoreboard players set @s hoverboard.on_water 0 
