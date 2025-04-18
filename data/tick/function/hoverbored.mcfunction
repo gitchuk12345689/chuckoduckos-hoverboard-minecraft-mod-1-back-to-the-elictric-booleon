@@ -60,6 +60,7 @@ execute if predicate tick:forward if score @s speed matches ..499 run scoreboard
 execute if predicate tick:backward if score @s speed matches ..299 run scoreboard players add $strength player_motion.api.launch 120
 
 #you are located above the liquid commonly known as water
+execute if score @s hoverboard.style matches 3 if score @s speed matches 1000.. if score #on hoverboard.on_water matches 1 run scoreboard players set @s hoverboard.on_water 0 
 execute if score #on hoverboard.on_water matches 1 run function tick:hoverbords/on_water
 
 # scoreboard players operation $strength player_motion.api.launch = @s move
@@ -77,3 +78,8 @@ execute if score @s hoverboard.style matches 2 run particle item{item:"bat_spawn
 execute if score @s hoverboard.style matches 3 run particle minecraft:trial_spawner_detection_ominous ~ ~-1 ~ 0.1 0.1 0.1 0 3
 execute if score @s hoverboard.style matches 3 if score @s speed matches 1000.. run particle explosion ~ ~-1 ~ 0.1 0.1 0.1 0 1
 execute if score @s hoverboard.style matches 4 run particle fishing ~ ~ ~ 0.25 0.1 0.25 0 5
+
+## everybody do the jump
+execute if predicate tick:jump run execute unless entity @s[tag=hoverbored.jump] at @s rotated ~ -90 run function tick:hoverbords/jump
+
+execute if score #air_blocks var matches ..19 run tag @s remove hoverbored.jump
