@@ -19,7 +19,7 @@
       "count": 1,
       "components": {
         "minecraft:item_model": "batboard",
-        "minecraft:custom_name": "{\"color\":\"#333233\",\"text\":\"Batboard\",\"italic\":false}",
+        "minecraft:custom_name": {color:"#333233",text:"Batboard",italic:false},
         "minecraft:rarity": "epic",
         "minecraft:consumable": {
           "animation": "block",
