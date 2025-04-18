@@ -20,3 +20,4 @@ scoreboard objectives add hoverboard.height dummy
 # % of speed on water (multiplied by *=/tick)
 scoreboard objectives add hoverboard.on_water dummy
 scoreboard objectives add hoverboard.stepheight dummy
+scoreboard objectives add hoverboard.jumpheight dummy

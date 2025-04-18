@@ -81,5 +81,5 @@ execute if score @s hoverboard.style matches 4 run particle fishing ~ ~ ~ 0.25 0
 
 ## everybody do the jump
 execute if predicate tick:jump run execute unless entity @s[tag=hoverbored.jump] at @s rotated ~ -90 run function tick:hoverbords/jump
-
+execute if entity @s[tag=hoverbored.jump] run attribute @s minecraft:gravity base set 0.04
 execute if score #air_blocks var matches ..19 run tag @s remove hoverbored.jump

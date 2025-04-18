@@ -5,6 +5,7 @@ execute store result score @s hoverboard.style run data get entity @s SelectedIt
 
 attribute @s minecraft:gravity base set 0.08
 attribute @s fall_damage_multiplier base set 0.0
+attribute @s minecraft:jump_strength base set 0
 scoreboard players set @s speed 1
 
 # Default Hoverboard Stats:
@@ -15,6 +16,7 @@ scoreboard players set @s hoverboard.deceleration 10
 scoreboard players set @s hoverboard.height 10
 scoreboard players set @s hoverboard.on_water 10
 scoreboard players set @s hoverboard.stepheight 5
+scoreboard players set @s hoverboard.jumpheight 5000
 
 ## create a hoverboard in the oevrworld
 execute if score @s hoverboard.style matches 1 run summon item_display ~ ~ ~ {Tags:["new.hoverboard", "hoverboard"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.8f,0f],scale:[1.5f,1.5f,1.5f]},item:{id:"minecraft:amethyst_shard",count:1,components:{"item_model":"hoverbored"}}, teleport_duration:1}
@@ -33,6 +35,7 @@ execute if score @s hoverboard.style matches 3 run scoreboard players set @s hov
 execute if score @s hoverboard.style matches 3 run scoreboard players set @s hoverboard.deceleration 10
 execute if score @s hoverboard.style matches 3 run scoreboard players set @s hoverboard.height 6
 execute if score @s hoverboard.style matches 3 run scoreboard players set @s hoverboard.stepheight -3
+execute if score @s hoverboard.style matches 3 run scoreboard players set @s hoverboard.on_water 1
 execute if score @s hoverboard.style matches 3 run scoreboard players set @s hoverboard.on_water 1
 #boaty the boatboat
 execute if score @s hoverboard.style matches 4 run summon item_display ~ ~ ~ {Tags:["new.hoverboard", "hoverboard"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.2f,0f],scale:[1.5f,1.5f,1.5f]},item:{id:"minecraft:amethyst_shard",count:1,components:{"item_model":"oak_boat"}}, teleport_duration:1}
