@@ -7,6 +7,7 @@ attribute @s minecraft:gravity base set 0.08
 attribute @s fall_damage_multiplier base set 0.0
 attribute @s minecraft:jump_strength base set 0
 scoreboard players set @s speed 1
+scoreboard players set @s boost 0
 
 # Default Hoverboard Stats:
 scoreboard players set @s hoverboard.max_speed 499
@@ -48,6 +49,7 @@ execute if score @s hoverboard.style matches 4 run scoreboard players set @s hov
 execute if score @s hoverboard.style matches 4 run scoreboard players set @s hoverboard.height 5
 execute if score @s hoverboard.style matches 4 run scoreboard players set @s hoverboard.on_water 0
 execute if score @s hoverboard.style matches 4 run scoreboard players set @s hoverboard.jumpheight 1000
+
 
 
 scoreboard players add $global.id hoverboard.id 1
