@@ -57,7 +57,7 @@ execute if predicate tick:backward if score @s speed > @s hoverboard.min_speed r
 
 scoreboard players operation $strength player_motion.api.launch = @s speed
 
-execute if predicate tick:hold_ring run function tick:hoverbords/fuel
+execute unless score @s fuel matches 1.. if predicate tick:hold_ring run function tick:hoverbords/fuel
 execute if score @s fuel matches 1.. run function tick:hoverbords/boosting
 
 execute if predicate tick:forward run scoreboard players remove $strength player_motion.api.launch 200
