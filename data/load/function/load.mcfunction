@@ -9,6 +9,10 @@ scoreboard objectives add boost dummy
 scoreboard objectives add fuel dummy
 
 # Constants
+scoreboard players set #3 var 3
+scoreboard players set #5 var 5
+scoreboard players set #8 var 8
+scoreboard players set #10 var 10
 scoreboard players set #100 var 100
 
 # Hoverboard Stat

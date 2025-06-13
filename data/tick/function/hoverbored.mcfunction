@@ -7,7 +7,7 @@ tag @s remove hoverbored.up
 execute store result score @s y_motion run data get entity @s Motion[1] 1000
 
 ## the number for height subtracts it from fifteen (in five out ten)
-scoreboard players operation #air_blocks var = @s hoverboard.height 
+scoreboard players operation #air_blocks var = @s hoverboard.height
 scoreboard players set #on hoverboard.on_water 0
 execute positioned ~ ~-0.1 ~ run function tick:hoverbords/aircheck
 scoreboard players operation AirBlocks y_motion = #air_blocks var
