@@ -6,6 +6,7 @@ scoreboard objectives add var dummy
 scoreboard objectives add y_motion dummy
 scoreboard objectives add speed dummy
 scoreboard objectives add boost dummy
+scoreboard objectives add fuel dummy
 
 # Constants
 scoreboard players set #100 var 100
