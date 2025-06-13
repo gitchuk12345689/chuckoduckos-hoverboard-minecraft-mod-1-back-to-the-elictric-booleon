@@ -27,3 +27,5 @@ scoreboard objectives add hoverboard.height dummy
 scoreboard objectives add hoverboard.on_water dummy
 scoreboard objectives add hoverboard.stepheight dummy
 scoreboard objectives add hoverboard.jumpheight dummy
+
+scoreboard objectives add hoverboard.jump_cooldown dummy
