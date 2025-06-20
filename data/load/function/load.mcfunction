@@ -8,6 +8,9 @@ scoreboard objectives add speed dummy
 scoreboard objectives add boost dummy
 scoreboard objectives add fuel dummy
 
+
+
+
 # Constants
 scoreboard players set #3 var 3
 scoreboard players set #5 var 5
@@ -29,3 +32,6 @@ scoreboard objectives add hoverboard.stepheight dummy
 scoreboard objectives add hoverboard.jumpheight dummy
 
 scoreboard objectives add hoverboard.jump_cooldown dummy
+
+scoreboard objectives add hoverboard.height.1 dummy
+scoreboard objectives add hoverboard.height.2 dummy

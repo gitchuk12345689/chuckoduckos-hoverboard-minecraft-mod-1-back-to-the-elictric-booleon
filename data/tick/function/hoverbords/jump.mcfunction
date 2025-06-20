@@ -1,6 +1,6 @@
 scoreboard players operation $strength player_motion.api.launch = @s hoverboard.jumpheight
 
-scoreboard players set @s hoverboard.jump_cooldown 20
+scoreboard players set @s hoverboard.jump_cooldown 10
 
 #execute if score #air_blocks var matches 11..14 run scoreboard players operation $strength player_motion.api.launch 
 
