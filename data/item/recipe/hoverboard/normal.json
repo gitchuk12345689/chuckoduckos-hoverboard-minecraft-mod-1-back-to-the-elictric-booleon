@@ -18,7 +18,7 @@
       "count": 1,
       "components": {
         "minecraft:item_model": "hoverbored",
-        "minecraft:custom_name": "{\"color\":\"#ff55e3\",\"text\":\"Hoverboard\",\"italic\":false}",
+        "minecraft:custom_name": {"color":"#ff55e3","text":"Hoverboard","italic":false},
         "minecraft:rarity": "epic",
         "minecraft:consumable": {
           "animation": "block",
