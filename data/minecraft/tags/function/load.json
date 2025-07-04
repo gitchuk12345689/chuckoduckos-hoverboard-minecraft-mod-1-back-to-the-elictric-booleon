@@ -1,5 +1,6 @@
 {
     "values": [
-      "load:load"
+	"load:load",
+	"player_motion:internal/technical/load"
     ]
 }
