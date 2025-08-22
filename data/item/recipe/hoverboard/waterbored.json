@@ -17,7 +17,7 @@
       "id": "minecraft:amethyst_shard",
       "count": 1,
       "components": {
-        "minecraft:item_model": "minecraft:oak_boat",
+        "minecraft:item_model": "boatbored",
         "minecraft:custom_name": {"color":"#5596ff","text":"waterbored","italic":true},
         "minecraft:rarity": "epic",
         "minecraft:consumable": {

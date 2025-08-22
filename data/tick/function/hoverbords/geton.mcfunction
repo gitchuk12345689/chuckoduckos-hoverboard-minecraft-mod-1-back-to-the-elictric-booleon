@@ -41,7 +41,7 @@ execute if score @s hoverboard.style matches 3 run scoreboard players set @s hov
 execute if score @s hoverboard.style matches 3 run scoreboard players set @s hoverboard.on_water 1
 execute if score @s hoverboard.style matches 3 run scoreboard players set @s hoverboard.jumpheight 10000
 #boaty the boatboat
-execute if score @s hoverboard.style matches 4 run summon item_display ~ ~ ~ {Tags:["new.hoverboard", "hoverboard"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.2f,0f],scale:[1.5f,1.5f,1.5f]},item:{id:"minecraft:amethyst_shard",count:1,components:{"item_model":"oak_boat"}}, teleport_duration:1}
+execute if score @s hoverboard.style matches 4 run summon item_display ~ ~ ~ {Tags:["new.hoverboard", "hoverboard"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.7f,0f],scale:[1.5f,1.5f,1.5f]},item:{id:"minecraft:amethyst_shard",count:1,components:{"item_model":"boatbored"}}, teleport_duration:1}
 execute if score @s hoverboard.style matches 4 run scoreboard players set @s hoverboard.max_speed 800
 execute if score @s hoverboard.style matches 4 run scoreboard players set @s hoverboard.min_speed -200
 execute if score @s hoverboard.style matches 4 run scoreboard players set @s hoverboard.acceleration 5
