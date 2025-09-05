@@ -7,7 +7,7 @@
         "items": "minecraft:gold_nugget",
         "predicates": {
           "minecraft:custom_data": {
-            "is_ring": true
+            "is_ring10": true
           }
         }
       }

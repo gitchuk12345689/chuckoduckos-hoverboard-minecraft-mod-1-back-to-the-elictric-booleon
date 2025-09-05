@@ -1,0 +1,30 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+
+    "group": "ring",
+    "pattern": [
+      " R ",
+      "RrR",
+      " R "
+    ],
+    "key": {
+      "r": "gold_nugget",
+      "R": "gold_ingot"
+    },
+    "result": {
+      "id": "minecraft:gold_nugget",
+      "count": 5,
+      "components": {
+        "minecraft:item_model": "ring",
+        "minecraft:custom_name": {"color":"#ffd745","text":"10 Ring","italic":true},
+        "minecraft:rarity": "epic",
+        "minecraft:custom_data": {
+          "is_ring10": true
+        },
+        "minecraft:max_stack_size": 64
+      }
+    },
+    "show_notification": true
+  }
+  

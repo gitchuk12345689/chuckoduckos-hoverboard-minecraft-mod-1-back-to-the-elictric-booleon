@@ -5,4 +5,4 @@ execute as @a at @s if score @s paints matches 1.. run function item:levitorpain
 
 execute as @a[tag=hoverboard] at @s run function tick:hoverbored
 
-execute if predicate tick:jump run say I'm moving up
+execute as @a[tag=!hoverboard.recipe] if predicate tick:jump run function tick:recipes
