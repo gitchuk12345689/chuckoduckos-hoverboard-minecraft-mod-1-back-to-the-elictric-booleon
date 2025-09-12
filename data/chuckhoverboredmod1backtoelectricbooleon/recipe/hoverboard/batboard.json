@@ -1,0 +1,37 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+
+    "group": "hoverboard",
+    "pattern": [
+      "###",
+      "121",
+      "A A"
+    ],
+    "key": {
+      "1": "minecraft:redstone_torch",
+      "2": "minecraft:diamond_block",
+      "#": "minecraft:gray_wool",
+      "A": "minecraft:diamond"
+    },
+    "result": {
+      "id": "minecraft:amethyst_shard",
+      "count": 1,
+      "components": {
+        "minecraft:item_model": "batboard",
+        "minecraft:custom_name": {"color":"#333233","text":"Batboard","italic":false},
+        "minecraft:rarity": "epic",
+        "minecraft:consumable": {
+          "animation": "block",
+          "has_consume_particles": false
+        },
+        "minecraft:custom_data": {
+          "is_hoverboard": true,
+          "hoverboard_style": 2
+        },
+        "minecraft:max_stack_size": 4
+      }
+    },
+    "show_notification": true
+  }
+  
