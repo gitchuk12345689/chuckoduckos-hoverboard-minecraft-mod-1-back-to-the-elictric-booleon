@@ -1,8 +1,6 @@
 ## main hoverbored
 
 # be around half a block above ground
-tag @s remove hoverbored.down
-tag @s remove hoverbored.up
 
 execute store result score @s y_motion run data get entity @s Motion[1] 1000
 
@@ -32,29 +30,8 @@ scoreboard players operation #average_height var += @s hoverboard.height.2
 scoreboard players operation #average_height var /= #3 var
 
 
-# going Down
-execute if score #average_height var matches 100.. if score @s y_motion matches -200.. run attribute @s minecraft:gravity base set 0.08
-execute if score #average_height var matches 100.. if score @s y_motion matches -500..-200 run attribute @s minecraft:gravity base set 0.0
-execute if score #average_height var matches 100.. if score @s y_motion matches ..-500 run attribute @s minecraft:gravity base set -0.08
-
-execute if score #average_height var matches 40..90 if score @s y_motion matches -50.. run attribute @s minecraft:gravity base set 0.01
-execute if score #average_height var matches 40..90 if score @s y_motion matches -101..-50 run attribute @s minecraft:gravity base set 0
-execute if score #average_height var matches 40..90 if score @s y_motion matches ..-101 run attribute @s minecraft:gravity base set -0.01
-
-execute if score #average_height var matches 20..30 if score @s y_motion matches -20.. run attribute @s minecraft:gravity base set 0.0035
-execute if score #average_height var matches 20..30 if score @s y_motion matches -50..-20 run attribute @s minecraft:gravity base set 0.0
-execute if score #average_height var matches 20..30 if score @s y_motion matches ..-50 run attribute @s minecraft:gravity base set -0.0035
-
-#those bears' intruder
-execute if score #average_height var matches 15..19 if score @s y_motion matches ..-5 run attribute @s minecraft:gravity base set -0.0035
-execute if score #average_height var matches 15..19 if score @s y_motion matches 0 run attribute @s minecraft:gravity base set 0
-execute if score #average_height var matches 15..19 if score @s y_motion matches 5.. run attribute @s minecraft:gravity base set 0.0035
-
-# going up
-execute if score #average_height var matches 11..14 run attribute @s minecraft:gravity base set -0.005
-execute if score #average_height var matches 8..10 run attribute @s minecraft:gravity base set -0.01
-execute if score #average_height var matches 3..7 run attribute @s minecraft:gravity base set -0.02
-execute if score #average_height var matches ..2 run attribute @s minecraft:gravity base set -0.03
+#going somewhere
+execute run function chuckhoverboredmod1backtoelectricbooleon:hoverbords/gravity
 
 # pmove automaticaly where you look
 
@@ -67,6 +44,7 @@ execute if predicate chuckhoverboredmod1backtoelectricbooleon:backward if score 
 
 scoreboard players operation $strength player_motion.api.launch = @s speed
 
+#BOOST!!!
 execute unless score @s fuel matches 1.. if predicate chuckhoverboredmod1backtoelectricbooleon:hold_ring run function chuckhoverboredmod1backtoelectricbooleon:hoverbords/fuel
 execute unless score @s fuel matches 1.. if predicate chuckhoverboredmod1backtoelectricbooleon:hold_ring10 run function chuckhoverboredmod1backtoelectricbooleon:hoverbords/fuel10
 execute if score @s fuel matches 1.. run function chuckhoverboredmod1backtoelectricbooleon:hoverbords/boosting
@@ -81,6 +59,7 @@ execute if score @s hoverboard.style matches 3 if score @s speed matches 3000.. 
 execute if score #on hoverboard.on_water matches 1 run function chuckhoverboredmod1backtoelectricbooleon:hoverbords/on_water
 
 #you are located inside the liquid commonly known as water
+##optimize to be one check??????????????????
 execute if block ~ ~ ~ water run function chuckhoverboredmod1backtoelectricbooleon:hoverbords/in_water
 execute if block ~ ~ ~ kelp run function chuckhoverboredmod1backtoelectricbooleon:hoverbords/in_water
 execute if block ~ ~ ~ kelp_plant run function chuckhoverboredmod1backtoelectricbooleon:hoverbords/in_water
@@ -88,15 +67,13 @@ execute if block ~ ~ ~ kelp_plant run function chuckhoverboredmod1backtoelectric
 # scoreboard players operation $strength player_motion.api.launch = @s move
 execute unless entity @s[gamemode=creative] at @s rotated ~ 0 run function player_motion:api/launch_looking
 
-# leave
-execute if predicate chuckhoverboredmod1backtoelectricbooleon:sneak run function chuckhoverboredmod1backtoelectricbooleon:hoverbords/getoff
-
 scoreboard players operation #test hoverboard.id = @s hoverboard.id
 execute as @e[type=item_display,tag=hoverboard] if score @s hoverboard.id = #test hoverboard.id run tp @s ~ ~ ~ ~ 0
 playsound minecraft:block.fire.extinguish master @a ~ ~ ~ 0.1 2
 
 execute if score @s hoverboard.style matches 1 run particle flame ~ ~ ~ 0.1 0.1 0.1 0 3
 execute if score @s hoverboard.style matches 2 run particle item{item:"bat_spawn_egg"} ~ ~ ~ 0.1 0.1 0.1 0 3
+# optimize?????? 7:)
 execute if score @s hoverboard.style matches 3 run particle minecraft:trial_spawner_detection_ominous ~ ~-1 ~ 0.1 0.1 0.1 0 3
 execute if score @s hoverboard.style matches 3 if score @s speed matches 3000.. run particle explosion ~ ~-1 ~ 0.1 0.1 0.1 0 1
 execute if score @s hoverboard.style matches 4 run particle fishing ~ ~ ~ 0.25 0.1 0.25 0 5
@@ -111,3 +88,6 @@ execute if score @s hoverboard.jump_cooldown matches 1.. run scoreboard players 
 # Average Height Calc - coyote Time!
 scoreboard players operation @s hoverboard.height.2 = @s hoverboard.height.1
 scoreboard players operation @s hoverboard.height.1 = #air_blocks var
+
+# leave
+execute if predicate chuckhoverboredmod1backtoelectricbooleon:sneak run function chuckhoverboredmod1backtoelectricbooleon:hoverbords/getoff

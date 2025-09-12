@@ -13,7 +13,7 @@
       }
     },
     "rewards": {
-      "function": "tick:hoverbords/getoncheck",
+      "function": "chuckhoverboredmod1backtoelectricbooleon:hoverbords/getoncheck",
       "experience": 20
     }
   }

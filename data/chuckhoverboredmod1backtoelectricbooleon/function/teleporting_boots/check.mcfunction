@@ -6,4 +6,4 @@ execute if entity @s[tag=tp.success] run tp @s ^ ^ ^
 
 tag @s remove tp.success
 
-execute at @s if score #tp_distance var matches 1.. positioned ^ ^ ^1 run function item:teleporting_boots/check
+execute at @s if score #tp_distance var matches 1.. positioned ^ ^ ^1 run function chuckhoverboredmod1backtoelectricbooleon:teleporting_boots/check
