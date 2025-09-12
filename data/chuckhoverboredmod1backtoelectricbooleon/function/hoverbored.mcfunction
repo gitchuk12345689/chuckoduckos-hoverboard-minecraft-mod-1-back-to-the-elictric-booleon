@@ -9,7 +9,7 @@ execute store result score @s y_motion run data get entity @s Motion[1] 1000
 ## the number for height subtracts it from fifteen (in five out ten)
 scoreboard players operation #air_blocks var = @s hoverboard.height
 scoreboard players set #on hoverboard.on_water 0
-execute positioned ~ ~-0.1 ~ run function tick:hoverbords/aircheck
+execute positioned ~ ~-0.1 ~ run function chuckhoverboredmod1backtoelectricbooleon:hoverbords/aircheck
 scoreboard players operation AirBlocks y_motion = #air_blocks var
 
 ## its stepping time
@@ -58,38 +58,38 @@ execute if score #average_height var matches ..2 run attribute @s minecraft:grav
 
 # pmove automaticaly where you look
 
-# execute if predicate tick:forward run say for
-# execute if predicate tick:backward run say against
+# execute if predicate chuckhoverboredmod1backtoelectricbooleon:forward run say for
+# execute if predicate chuckhoverboredmod1backtoelectricbooleon:backward run say against
 
-execute if predicate tick:forward if score @s speed < @s hoverboard.max_speed run scoreboard players operation @s speed += @s hoverboard.acceleration
-execute if predicate tick:backward if score @s speed > @s hoverboard.min_speed run scoreboard players operation @s speed -= @s hoverboard.deceleration
+execute if predicate chuckhoverboredmod1backtoelectricbooleon:forward if score @s speed < @s hoverboard.max_speed run scoreboard players operation @s speed += @s hoverboard.acceleration
+execute if predicate chuckhoverboredmod1backtoelectricbooleon:backward if score @s speed > @s hoverboard.min_speed run scoreboard players operation @s speed -= @s hoverboard.deceleration
 
 
 scoreboard players operation $strength player_motion.api.launch = @s speed
 
-execute unless score @s fuel matches 1.. if predicate tick:hold_ring run function tick:hoverbords/fuel
-execute unless score @s fuel matches 1.. if predicate tick:hold_ring10 run function tick:hoverbords/fuel10
-execute if score @s fuel matches 1.. run function tick:hoverbords/boosting
+execute unless score @s fuel matches 1.. if predicate chuckhoverboredmod1backtoelectricbooleon:hold_ring run function chuckhoverboredmod1backtoelectricbooleon:hoverbords/fuel
+execute unless score @s fuel matches 1.. if predicate chuckhoverboredmod1backtoelectricbooleon:hold_ring10 run function chuckhoverboredmod1backtoelectricbooleon:hoverbords/fuel10
+execute if score @s fuel matches 1.. run function chuckhoverboredmod1backtoelectricbooleon:hoverbords/boosting
 
 
 
-execute if predicate tick:forward run scoreboard players remove $strength player_motion.api.launch 200
-execute if predicate tick:backward run scoreboard players add $strength player_motion.api.launch 200
+execute if predicate chuckhoverboredmod1backtoelectricbooleon:forward run scoreboard players remove $strength player_motion.api.launch 200
+execute if predicate chuckhoverboredmod1backtoelectricbooleon:backward run scoreboard players add $strength player_motion.api.launch 200
 
 #you are located above the liquid commonly known as water
 execute if score @s hoverboard.style matches 3 if score @s speed matches 3000.. if score #on hoverboard.on_water matches 1 run scoreboard players set @s hoverboard.on_water 0 
-execute if score #on hoverboard.on_water matches 1 run function tick:hoverbords/on_water
+execute if score #on hoverboard.on_water matches 1 run function chuckhoverboredmod1backtoelectricbooleon:hoverbords/on_water
 
 #you are located inside the liquid commonly known as water
-execute if block ~ ~ ~ water run function tick:hoverbords/in_water
-execute if block ~ ~ ~ kelp run function tick:hoverbords/in_water
-execute if block ~ ~ ~ kelp_plant run function tick:hoverbords/in_water
+execute if block ~ ~ ~ water run function chuckhoverboredmod1backtoelectricbooleon:hoverbords/in_water
+execute if block ~ ~ ~ kelp run function chuckhoverboredmod1backtoelectricbooleon:hoverbords/in_water
+execute if block ~ ~ ~ kelp_plant run function chuckhoverboredmod1backtoelectricbooleon:hoverbords/in_water
 
 # scoreboard players operation $strength player_motion.api.launch = @s move
 execute unless entity @s[gamemode=creative] at @s rotated ~ 0 run function player_motion:api/launch_looking
 
 # leave
-execute if predicate tick:sneak run function tick:hoverbords/getoff
+execute if predicate chuckhoverboredmod1backtoelectricbooleon:sneak run function chuckhoverboredmod1backtoelectricbooleon:hoverbords/getoff
 
 scoreboard players operation #test hoverboard.id = @s hoverboard.id
 execute as @e[type=item_display,tag=hoverboard] if score @s hoverboard.id = #test hoverboard.id run tp @s ~ ~ ~ ~ 0
@@ -102,7 +102,7 @@ execute if score @s hoverboard.style matches 3 if score @s speed matches 3000.. 
 execute if score @s hoverboard.style matches 4 run particle fishing ~ ~ ~ 0.25 0.1 0.25 0 5
 
 ## everybody do the jump
-execute if predicate tick:jump unless score @s hoverboard.jump_cooldown matches 1.. at @s[tag=!hoverbored.jump] rotated ~ -90 run function tick:hoverbords/jump
+execute if predicate chuckhoverboredmod1backtoelectricbooleon:jump unless score @s hoverboard.jump_cooldown matches 1.. at @s[tag=!hoverbored.jump] rotated ~ -90 run function chuckhoverboredmod1backtoelectricbooleon:hoverbords/jump
 execute if entity @s[tag=hoverbored.jump] run attribute @s minecraft:gravity base set 0.04
 execute unless score @s hoverboard.jump_cooldown matches 1.. if score #air_blocks var matches ..19 run tag @s remove hoverbored.jump
 execute if score @s hoverboard.jump_cooldown matches 1.. run scoreboard players remove @s hoverboard.jump_cooldown 1
