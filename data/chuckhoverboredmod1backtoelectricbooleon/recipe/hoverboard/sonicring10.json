@@ -16,7 +16,7 @@
       "id": "minecraft:gold_nugget",
       "count": 5,
       "components": {
-        "minecraft:item_model": "ring",
+        "minecraft:item_model": "ring10x",
         "minecraft:custom_name": {"color":"#ffd745","text":"10 Ring","italic":true},
         "minecraft:rarity": "epic",
         "minecraft:custom_data": {
