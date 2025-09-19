@@ -71,12 +71,7 @@ scoreboard players operation #test hoverboard.id = @s hoverboard.id
 execute as @e[type=item_display,tag=hoverboard] if score @s hoverboard.id = #test hoverboard.id run tp @s ~ ~ ~ ~ 0
 playsound minecraft:block.fire.extinguish master @a ~ ~ ~ 0.1 2
 
-execute if score @s hoverboard.style matches 1 run particle flame ~ ~ ~ 0.1 0.1 0.1 0 3
-execute if score @s hoverboard.style matches 2 run particle item{item:"bat_spawn_egg"} ~ ~ ~ 0.1 0.1 0.1 0 3
-# optimize?????? 7:)
-execute if score @s hoverboard.style matches 3 run particle minecraft:trial_spawner_detection_ominous ~ ~-1 ~ 0.1 0.1 0.1 0 3
-execute if score @s hoverboard.style matches 3 if score @s speed matches 3000.. run particle explosion ~ ~-1 ~ 0.1 0.1 0.1 0 1
-execute if score @s hoverboard.style matches 4 run particle fishing ~ ~ ~ 0.25 0.1 0.25 0 5
+function chuckhoverboredmod1backtoelectricbooleon:hoverbords/stylepoints/particles
 
 ## everybody do the jump
 execute if predicate chuckhoverboredmod1backtoelectricbooleon:jump unless score @s hoverboard.jump_cooldown matches 1.. at @s[tag=!hoverbored.jump] rotated ~ -90 run function chuckhoverboredmod1backtoelectricbooleon:hoverbords/jump
