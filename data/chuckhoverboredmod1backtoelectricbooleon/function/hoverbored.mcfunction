@@ -60,9 +60,7 @@ execute if score #on hoverboard.on_water matches 1 run function chuckhoverboredm
 
 #you are located inside the liquid commonly known as water
 ##optimize to be one check??????????????????
-execute if block ~ ~ ~ water run function chuckhoverboredmod1backtoelectricbooleon:hoverbords/in_water
-execute if block ~ ~ ~ kelp run function chuckhoverboredmod1backtoelectricbooleon:hoverbords/in_water
-execute if block ~ ~ ~ kelp_plant run function chuckhoverboredmod1backtoelectricbooleon:hoverbords/in_water
+execute if predicate chuckhoverboredmod1backtoelectricbooleon:in_water run function chuckhoverboredmod1backtoelectricbooleon:hoverbords/in_water
 
 # scoreboard players operation $strength player_motion.api.launch = @s move
 execute unless entity @s[gamemode=creative] at @s rotated ~ 0 run function player_motion:api/launch_looking
