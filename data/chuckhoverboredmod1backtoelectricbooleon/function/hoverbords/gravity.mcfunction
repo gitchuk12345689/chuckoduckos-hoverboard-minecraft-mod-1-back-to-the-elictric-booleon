@@ -1,4 +1,5 @@
 # going Down
+attribute @s minecraft:gravity modifier remove minecraft:hoverboard
 execute if score #average_height var matches 100.. run return run function chuckhoverboredmod1backtoelectricbooleon:hoverbords/gravity/down100
 
 execute if score #average_height var matches 40..90 run return run function chuckhoverboredmod1backtoelectricbooleon:hoverbords/gravity/down4090
