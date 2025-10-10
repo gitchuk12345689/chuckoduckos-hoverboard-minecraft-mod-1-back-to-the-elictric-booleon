@@ -35,3 +35,9 @@ scoreboard objectives add hoverboard.jump_cooldown dummy
 
 scoreboard objectives add hoverboard.height.1 dummy
 scoreboard objectives add hoverboard.height.2 dummy
+
+## new
+
+forceload add 0 0
+kill @e[type=marker,tag=hoverboard.pos]
+summon marker 0 0 0 {Tags:["hoverboard.pos"]}
