@@ -55,7 +55,8 @@ execute unless score @s hoverboard.jump_cooldown matches 1.. if score #air_block
 execute if score @s hoverboard.jump_cooldown matches 1.. run scoreboard players remove @s hoverboard.jump_cooldown 1
 
 ## Final movement
-execute positioned 0.0 0.0 0.0 rotated as @s[scores={speed=..100}] positioned ^ ^ ^1 run tp @n[type=marker,tag=hoverboard.pos] ~ ~ ~
+execute positioned 0.0 0.0 0.0 rotated as @s[scores={speed=..-1}] positioned ^ ^ ^-1 run tp @n[type=marker,tag=hoverboard.pos] ~ ~ ~
+execute positioned 0.0 0.0 0.0 rotated as @s[scores={speed=0..100}] positioned ^ ^ ^1 run tp @n[type=marker,tag=hoverboard.pos] ~ ~ ~
 execute positioned 0.0 0.0 0.0 rotated as @s[scores={speed=100..}] positioned ^ ^ ^2 run tp @n[type=marker,tag=hoverboard.pos] ~ ~ ~
 data modify entity @n[type=pig,tag=test] Motion set from entity @n[type=marker,tag=hoverboard.pos] Pos
 
