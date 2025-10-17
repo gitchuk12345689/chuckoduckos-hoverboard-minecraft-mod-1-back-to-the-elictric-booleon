@@ -44,7 +44,7 @@ execute if predicate chuckhoverboredmod1backtoelectricbooleon:in_water run funct
 #execute unless entity @s[gamemode=creative] at @s rotated ~ 0 run function player_motion:api/launch_looking
 
 scoreboard players operation #test hoverboard.id = @s hoverboard.id
-execute as @e[type=item_display,tag=hoverboard] if score @s hoverboard.id = #test hoverboard.id run tp @s ~ ~ ~ ~ 0
+#execute as @e[type=item_display,tag=hoverboard] if score @s hoverboard.id = #test hoverboard.id run tp @s ~ ~ ~ ~ 0
 playsound minecraft:block.fire.extinguish master @a ~ ~ ~ 0.1 2
 
 function chuckhoverboredmod1backtoelectricbooleon:hoverbords/stylepoints/particles
@@ -59,7 +59,7 @@ execute positioned 0.0 0.0 0.0 rotated as @s[scores={speed=..-1}] positioned ^ ^
 execute positioned 0.0 0.0 0.0 rotated as @s[scores={speed=0..100}] positioned ^ ^ ^1 run tp @n[type=marker,tag=hoverboard.pos] ~ ~ ~
 execute positioned 0.0 0.0 0.0 rotated as @s[scores={speed=100..}] positioned ^ ^ ^2 run tp @n[type=marker,tag=hoverboard.pos] ~ ~ ~
 execute positioned 0.0 0.0 0.0 rotated as @s[scores={speed=0..100}] positioned ^ ^ ^1 run particle flame ~ ~ ~
-data modify entity @n[type=pig,tag=test] Motion set from entity @n[type=marker,tag=hoverboard.pos] Pos
+execute as @e[type=item_display,tag=hoverboard] if score @s hoverboard.id = #test hoverboard.id run data modify entity @s Motion set from entity @n[type=marker,tag=hoverboard.pos] Pos
 
 
 
