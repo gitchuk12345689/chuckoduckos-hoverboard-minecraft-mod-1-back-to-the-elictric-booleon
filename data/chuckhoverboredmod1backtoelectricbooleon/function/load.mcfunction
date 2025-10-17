@@ -12,6 +12,7 @@ scoreboard objectives add fuel dummy
 
 
 # Constants
+scoreboard players set #2 var 2
 scoreboard players set #3 var 3
 scoreboard players set #5 var 5
 scoreboard players set #8 var 8

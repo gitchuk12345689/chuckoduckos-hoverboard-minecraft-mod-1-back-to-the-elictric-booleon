@@ -59,7 +59,10 @@ execute positioned 0.0 0.0 0.0 rotated as @s[scores={speed=..-1}] positioned ^ ^
 execute positioned 0.0 0.0 0.0 rotated as @s[scores={speed=0..100}] positioned ^ ^ ^1 run tp @n[type=marker,tag=hoverboard.pos] ~ ~ ~
 execute positioned 0.0 0.0 0.0 rotated as @s[scores={speed=100..}] positioned ^ ^ ^2 run tp @n[type=marker,tag=hoverboard.pos] ~ ~ ~
 execute positioned 0.0 0.0 0.0 rotated as @s[scores={speed=0..100}] positioned ^ ^ ^1 run particle flame ~ ~ ~
-execute as @n[type=pig,tag=test] run data modify entity @s Motion set from entity @n[type=marker,tag=hoverboard.pos] Pos
+scoreboard players add #counter var 1
+scoreboard players operation #counter var %= #5 var
+
+execute if score #counter var matches 1 as @n[type=pig,tag=test] run data modify entity @s Motion set from entity @n[type=marker,tag=hoverboard.pos] Pos
 
 
 
