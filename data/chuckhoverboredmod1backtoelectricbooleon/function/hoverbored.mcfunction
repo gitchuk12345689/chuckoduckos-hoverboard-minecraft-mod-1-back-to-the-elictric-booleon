@@ -47,7 +47,7 @@ scoreboard players operation #test hoverboard.id = @s hoverboard.id
 execute at @n[type=pig,tag=test] as @e[type=item_display,tag=hoverboard] if score @s hoverboard.id = #test hoverboard.id run tp @s ^ ^ ^-1 ~ 0
 playsound minecraft:block.fire.extinguish master @a ~ ~ ~ 0.1 2
 
-function chuckhoverboredmod1backtoelectricbooleon:hoverbords/stylepoints/particles
+execute at @n[type=pig,tag=test] run function chuckhoverboredmod1backtoelectricbooleon:hoverbords/stylepoints/particles
 
 ## everybody do the jump
 #execute if predicate chuckhoverboredmod1backtoelectricbooleon:jump unless score @s hoverboard.jump_cooldown matches 1.. at @s[tag=!hoverbored.jump] rotated ~ -90 run function chuckhoverboredmod1backtoelectricbooleon:hoverbords/jump
@@ -58,11 +58,9 @@ execute if score @s hoverboard.jump_cooldown matches 1.. run scoreboard players 
 execute positioned 0.0 0.0 0.0 rotated as @s[scores={speed=..-1}] positioned ^ ^ ^-1 run tp @n[type=marker,tag=hoverboard.pos] ~ ~ ~
 execute positioned 0.0 0.0 0.0 rotated as @s[scores={speed=0..100}] positioned ^ ^ ^1 run tp @n[type=marker,tag=hoverboard.pos] ~ ~ ~
 execute positioned 0.0 0.0 0.0 rotated as @s[scores={speed=100..}] positioned ^ ^ ^2 run tp @n[type=marker,tag=hoverboard.pos] ~ ~ ~
-execute positioned 0.0 0.0 0.0 rotated as @s[scores={speed=0..100}] positioned ^ ^ ^1 run particle flame ~ ~ ~
-scoreboard players add #counter var 1
-scoreboard players operation #counter var %= #2 var
 
-execute if score #counter var matches 1 as @n[type=pig,tag=test] run data modify entity @s Motion set from entity @n[type=marker,tag=hoverboard.pos] Pos
+
+execute as @n[type=pig,tag=test] run data modify entity @s Motion set from entity @n[type=marker,tag=hoverboard.pos] Pos
 
 
 
