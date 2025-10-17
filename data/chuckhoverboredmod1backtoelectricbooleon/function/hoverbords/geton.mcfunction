@@ -1,4 +1,3 @@
-
 ## stand on the hoverbored (right click the item)
 tag @s add hoverboard
 
@@ -55,6 +54,7 @@ execute if score @s hoverboard.style matches 4 run scoreboard players set @s hov
 scoreboard players add $global.id hoverboard.id 1
 scoreboard players operation @s hoverboard.id = $global.id hoverboard.id
 scoreboard players operation @n[type=item_display, tag=new.hoverboard] hoverboard.id = $global.id hoverboard.id
-ride @s mount @n[type=item_display,tag=new.hoverboard]
 tag @n[type=item_display, tag=new.hoverboard] remove new.hoverboard
 
+summon pig ~ ~ ~ {Tags:["test"],attributes:[{id:"minecraft:scale",base:0}], NoGravity:true ,Invulnerable:true}
+ride @s mount @n[type=pig,tag=test]
