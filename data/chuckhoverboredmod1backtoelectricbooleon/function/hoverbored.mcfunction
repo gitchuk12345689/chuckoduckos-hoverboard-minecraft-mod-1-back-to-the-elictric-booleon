@@ -1,5 +1,5 @@
 
-execute as @n[type=pig,tag=test] at @s rotated as @p run tp @s ~ ~ ~ ~ 0
+execute as @n[type=pig,tag=test] at @s rotated as @p rotated ~ 0 run tp @s ~ ~ ~ ~ 0
 
 
 
@@ -22,7 +22,7 @@ scoreboard players operation #average_height var += @s hoverboard.height.2
 scoreboard players operation #average_height var /= #3 var
 
 #Vertical movement?
-#execute run function chuckhoverboredmod1backtoelectricbooleon:hoverbords/gravity
+execute as @n[type=pig,tag=test] run function chuckhoverboredmod1backtoelectricbooleon:hoverbords/gravity
 
 execute if predicate chuckhoverboredmod1backtoelectricbooleon:forward if score @s speed < @s hoverboard.max_speed run scoreboard players operation @s speed += @s hoverboard.acceleration
 execute if predicate chuckhoverboredmod1backtoelectricbooleon:backward if score @s speed > @s hoverboard.min_speed run scoreboard players operation @s speed -= @s hoverboard.deceleration
@@ -44,7 +44,7 @@ execute if predicate chuckhoverboredmod1backtoelectricbooleon:in_water run funct
 #execute unless entity @s[gamemode=creative] at @s rotated ~ 0 run function player_motion:api/launch_looking
 
 scoreboard players operation #test hoverboard.id = @s hoverboard.id
-execute at @n[type=pig,tag=test] as @e[type=item_display,tag=hoverboard] if score @s hoverboard.id = #test hoverboard.id run tp @s ^ ^ ^-1 ~ 0
+execute at @n[type=pig,tag=test] rotated ~ 0 as @e[type=item_display,tag=hoverboard] if score @s hoverboard.id = #test hoverboard.id run tp @s ^ ^ ^ ~ 0
 playsound minecraft:block.fire.extinguish master @a ~ ~ ~ 0.1 2
 
 execute at @n[type=pig,tag=test] run function chuckhoverboredmod1backtoelectricbooleon:hoverbords/stylepoints/particles
@@ -55,9 +55,9 @@ execute unless score @s hoverboard.jump_cooldown matches 1.. if score #air_block
 execute if score @s hoverboard.jump_cooldown matches 1.. run scoreboard players remove @s hoverboard.jump_cooldown 1
 
 ## Final movement
-execute positioned 0.0 0.0 0.0 rotated as @s[scores={speed=..-1}] positioned ^ ^ ^-1 run tp @n[type=marker,tag=hoverboard.pos] ~ ~ ~
-execute positioned 0.0 0.0 0.0 rotated as @s[scores={speed=0..100}] positioned ^ ^ ^1 run tp @n[type=marker,tag=hoverboard.pos] ~ ~ ~
-execute positioned 0.0 0.0 0.0 rotated as @s[scores={speed=100..}] positioned ^ ^ ^2 run tp @n[type=marker,tag=hoverboard.pos] ~ ~ ~
+execute positioned 0.0 0.0 0.0 rotated as @s[scores={speed=..-1}] rotated ~ 0 positioned ^ ^ ^-1 run tp @n[type=marker,tag=hoverboard.pos] ~ ~ ~
+execute positioned 0.0 0.0 0.0 rotated as @s[scores={speed=0..100}] rotated ~ 0 positioned ^ ^ ^1 run tp @n[type=marker,tag=hoverboard.pos] ~ ~ ~
+execute positioned 0.0 0.0 0.0 rotated as @s[scores={speed=100..}] rotated ~ 0 positioned ^ ^ ^2 run tp @n[type=marker,tag=hoverboard.pos] ~ ~ ~
 
 
 execute as @n[type=pig,tag=test] run data modify entity @s Motion set from entity @n[type=marker,tag=hoverboard.pos] Pos

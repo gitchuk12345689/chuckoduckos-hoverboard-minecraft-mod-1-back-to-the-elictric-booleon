@@ -56,5 +56,5 @@ scoreboard players operation @s hoverboard.id = $global.id hoverboard.id
 scoreboard players operation @n[type=item_display, tag=new.hoverboard] hoverboard.id = $global.id hoverboard.id
 tag @n[type=item_display, tag=new.hoverboard] remove new.hoverboard
 
-summon pig ~ ~ ~ {Tags:["test"],attributes:[{id:"minecraft:scale",base:0}], NoGravity:true ,Invulnerable:true}
+summon pig ~ ~ ~ {Tags:["test"],attributes:[{id:"minecraft:scale",base:0}], NoGravity:false ,Invulnerable:true}
 ride @s mount @n[type=pig,tag=test]
