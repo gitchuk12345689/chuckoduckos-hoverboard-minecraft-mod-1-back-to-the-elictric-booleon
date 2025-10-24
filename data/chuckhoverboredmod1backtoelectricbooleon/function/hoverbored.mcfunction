@@ -22,7 +22,8 @@ scoreboard players operation #average_height var += @s hoverboard.height.2
 scoreboard players operation #average_height var /= #3 var
 
 #Vertical movement?
-execute as @n[type=pig,tag=test] run function chuckhoverboredmod1backtoelectricbooleon:hoverbords/gravity
+execute if score #average_height var matches 15.. as @n[type=pig,tag=test] at @s run tp @s ~ ~-0.05 ~
+execute if score #average_height var matches ..5 as @n[type=pig,tag=test] at @s run tp @s ~ ~0.05 ~
 
 execute if predicate chuckhoverboredmod1backtoelectricbooleon:forward if score @s speed < @s hoverboard.max_speed run scoreboard players operation @s speed += @s hoverboard.acceleration
 execute if predicate chuckhoverboredmod1backtoelectricbooleon:backward if score @s speed > @s hoverboard.min_speed run scoreboard players operation @s speed -= @s hoverboard.deceleration
