@@ -5,12 +5,12 @@ execute as @n[type=pig,tag=test] at @s rotated as @p rotated ~ 0 run tp @s ~ ~ ~
 
 scoreboard players operation #air_blocks var = @s hoverboard.height
 scoreboard players set #on hoverboard.on_water 0
-execute positioned ~ ~-0.1 ~ run function chuckhoverboredmod1backtoelectricbooleon:hoverbords/aircheck
+execute at @n[type=pig,tag=test] positioned ~ ~-0.1 ~ run function chuckhoverboredmod1backtoelectricbooleon:hoverbords/aircheck
 scoreboard players operation AirBlocks y_motion = #air_blocks var
 
 ## its stepping time
 #execute rotated ~ 0 positioned ^ ^ ^1 unless block ~ ~ ~ #air run particle flame
-execute rotated ~ 0 positioned ^ ^ ^1 unless block ~ ~ ~ #air run scoreboard players operation #air_blocks var -= @s hoverboard.stepheight
+execute at @n[type=pig,tag=test] rotated ~ 0 positioned ^ ^ ^1 unless block ~ ~ ~ #air run scoreboard players operation #air_blocks var -= @s hoverboard.stepheight
 
 # TWO OPTIONS:
 # 1. Calculate Y-Motion with an acceleration value, gets more negative longer above 
@@ -22,8 +22,8 @@ scoreboard players operation #average_height var += @s hoverboard.height.2
 scoreboard players operation #average_height var /= #3 var
 
 #Vertical movement?
-execute if score #average_height var matches 15.. as @n[type=pig,tag=test] at @s run tp @s ~ ~-0.05 ~
-execute if score #average_height var matches ..5 as @n[type=pig,tag=test] at @s run tp @s ~ ~0.05 ~
+execute if score #average_height var matches 25.. as @n[type=pig,tag=test] at @s run tp @s ~ ~-0.1 ~
+execute if score #average_height var matches ..10 as @n[type=pig,tag=test] at @s run tp @s ~ ~0.1 ~
 
 execute if predicate chuckhoverboredmod1backtoelectricbooleon:forward if score @s speed < @s hoverboard.max_speed run scoreboard players operation @s speed += @s hoverboard.acceleration
 execute if predicate chuckhoverboredmod1backtoelectricbooleon:backward if score @s speed > @s hoverboard.min_speed run scoreboard players operation @s speed -= @s hoverboard.deceleration
@@ -71,4 +71,5 @@ scoreboard players operation @s hoverboard.height.1 = #air_blocks var
 
 # leave
 execute if predicate chuckhoverboredmod1backtoelectricbooleon:sneak run function chuckhoverboredmod1backtoelectricbooleon:hoverbords/getoff
-title @p actionbar {"entity":"@n[type=pig]","nbt":"Pos"}
+#title @p actionbar {"entity":"@n[type=pig]","nbt":"Pos"}
+title @p actionbar {"score":{name:"#average_height",objective:"var"}}
